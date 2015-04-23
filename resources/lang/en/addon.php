@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'name'        => 'Streams',
-    'description' => 'The the official admin theme for Streams.',
+    'name'        => 'Anomaly Theme',
+    'description' => 'The official admin theme for Streams Platform products from AnomalyLabs.'
 ];
