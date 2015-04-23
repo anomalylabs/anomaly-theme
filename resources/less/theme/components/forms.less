@@ -1,0 +1,25 @@
+.form-group {
+    .required {
+        color: @brand-danger;
+    }
+}
+
+.form-control {
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        opacity: 0.8;
+        cursor: not-allowed;
+        color: mix(@gray-dark, white, 80%);
+        background-color: @input-bg-disabled;
+        border-color: mix(@gray, white, 30%);
+    }
+}
+
+a.input-group-addon {
+    &,
+    &:hover,
+    &:focus {
+        color: white;
+    }
+}

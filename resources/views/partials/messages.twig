@@ -1,0 +1,39 @@
+<div class="container-fluid">
+
+    <!-- Success Messages -->
+    {% if message_exists('success') %}
+        <div class="alert alert-success">
+            {% for message in message_get('success') %}
+                {{ trans(message)|markdown }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- Informational Messages -->
+    {% if message_exists('info') %}
+        <div class="alert alert-info">
+            {% for message in message_get('info') %}
+                {{ trans(message)|markdown }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- Warning Messages -->
+    {% if message_exists('warning') %}
+        <div class="alert alert-warning">
+            {% for message in message_get('info') %}
+                {{ trans(message)|markdown }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- Error Messages -->
+    {% if message_exists('error') %}
+        <div class="alert alert-danger">
+            {% for message in message_get('error') %}
+                {{ trans(message)|markdown }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+</div>
