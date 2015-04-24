@@ -25,5 +25,11 @@
         "psr-4": {
             "Anomaly\\AnomalyTheme\\": "src/"
         }
-    }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "dev"
 }
