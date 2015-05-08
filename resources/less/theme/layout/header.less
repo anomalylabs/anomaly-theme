@@ -6,26 +6,74 @@
     position: fixed;
     background-color: @brand-secondary;
     box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    transition: all @animationDefault @easeInSine;
 
-    .nav {
-        li {
-            a {
-                color: rgba(0, 0, 0, 0.18);
-            }
+    .navbar-header {
+        a {
+            color: white;
+            padding: 0 15px;
+            font-size: 18px;
+            line-height: 50px;
+        }
+    }
 
-            &.active {
+    .navbar-collapse {
+        padding-left: 0;
+        padding-right: 0;
+
+        .nav {
+            li {
                 a {
-                    color: @inverse;
+                    color: rgba(0, 0, 0, 0.18);
+                }
+
+                &.active {
+                    a {
+                        color: @inverse;
+                    }
                 }
             }
         }
     }
 
-    .btn {
-        background-color: rgba(0, 0, 0, 0.07) !important;
+    .buttons {
+        float: right;
 
-        &:hover {
-            box-shadow: 0 0 0 1px @inverse;
+        .btn {
+            background-color: rgba(0, 0, 0, 0.07) !important;
+
+            &:hover {
+                box-shadow: 0 0 0 1px @inverse;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    #header {
+        left: 0;
+
+        .navbar-collapse {
+            padding-right: 15px;
+            padding-left: 15px;
+
+            .nav {
+                li {
+                    a {
+                        padding: 5px 0 5px 0;
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            float: none;
+            margin-bottom: 5px;
+
+            .btn {
+                display: block;
+                margin-bottom: 5px;
+            }
         }
     }
 }

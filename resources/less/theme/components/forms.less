@@ -23,3 +23,39 @@ a.input-group-addon {
         color: white;
     }
 }
+
+form {
+    .controls {
+        .actions {
+            float: left;
+        }
+
+        .buttons {
+            float: right;
+        }
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    form.form {
+        .controls {
+            .actions {
+                float: none;
+            }
+
+            .buttons {
+                float: none;
+            }
+
+            .actions,
+            .buttons {
+                .btn {
+                    width: 100%;
+                    float: none;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
