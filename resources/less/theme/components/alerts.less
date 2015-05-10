@@ -1,7 +1,25 @@
 .alert {
     margin-bottom: 0;
     color: @alert-text;
+    position: relative;
     padding: @alert-padding;
     margin-top: @line-height-computed/2;
     box-shadow: 0 3px 0 rgba(0, 0, 0, 0.03);
+
+    .close {
+        top: -2px;
+        right: -2px;
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+        line-height: 24px;
+        position: absolute;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        span {
+            opacity: 1;
+        }
+    }
 }
