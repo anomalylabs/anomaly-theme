@@ -126,11 +126,20 @@
 
 @media (max-width: @screen-xs-max) {
     #navigation {
+        width: 0;
         margin-left: -60px;
+
+        &:hover {
+            width: 0;
+        }
 
         &.open {
             width: 100%;
             margin-left: 0;
+
+            &:hover {
+                width: 0;
+            }
         }
     }
 }
