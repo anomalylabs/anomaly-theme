@@ -40,6 +40,11 @@ $(function () {
 
         e.preventDefault();
 
-        $($(e.target).data('target')).find('.model-content').load($(e.target).attr('href'));
+        $($(e.target).data('target')).appendTo('body').find('.model-content').load($(e.target).attr('href'));
+    });
+
+    // Clear remote modals when closed.
+    $('.modal.remote').on('hidden.bs.modal', function () {
+        $(this).find('.modal-content').html('');
     });
 });
