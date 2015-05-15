@@ -8,6 +8,8 @@
     margin-bottom: -5px;
 
     > li {
+        margin-right: 2px;
+
         &.active {
             z-index: 1;
 
@@ -21,6 +23,11 @@
 
         > a {
             background-color: rgba(0, 0, 0, 0.015);
+
+            &:hover {
+                color: @nav-tabs-color;
+                background-color: rgba(0, 0, 0, 0.035);
+            }
         }
     }
 }
