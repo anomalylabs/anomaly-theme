@@ -19,6 +19,7 @@
                 {% for section in template.cp.sections %}
                     <li class="{{ section.active ? 'active' }}">
                         <a {{ html_attributes(section.attributes) }}>
+                            {{ section.icon ? icon(section.icon)|raw }}
                             {{ trans(section.text) }}
                         </a>
                     </li>

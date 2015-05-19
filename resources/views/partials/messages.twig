@@ -30,7 +30,7 @@
             <button type="button" class="close" data-dismiss="alert">
                 <span>&times;</span>
             </button>
-            {% for message in message_get('info') %}
+            {% for message in message_get('warning') %}
                 {{ trans(message)|markdown }}
             {% endfor %}
         </div>
