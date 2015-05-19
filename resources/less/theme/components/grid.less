@@ -1,3 +1,41 @@
-.row.stacked {
-    margin-bottom: @line-height-computed/2;
+//
+// Grid UI
+// --------------------------------------------------
+
+ul.grid {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0 !important;
+
+    ul, ol {
+        list-style: none;
+    }
+
+    li {
+        display: block !important;
+        position: inherit !important;
+
+        .panel {
+            margin-bottom: @line-height-computed/3;
+
+            .buttons {
+                float: right;
+                display: none;
+            }
+
+            &:hover {
+                > .buttons {
+                    display: block;
+                }
+            }
+        }
+
+        &.dragged {
+            opacity: 0.5;
+        }
+
+        &.placeholder {
+            display: none;
+        }
+    }
 }
