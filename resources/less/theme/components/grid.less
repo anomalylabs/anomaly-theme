@@ -14,8 +14,14 @@ ul.grid {
     li {
         display: block !important;
         position: inherit !important;
+        font-size: @btn-font-size-base - 1;
+
+        .icon {
+            margin-right: 3px;
+        }
 
         .panel {
+            padding: 0 @padding-base-horizontal/4;
             margin-bottom: @line-height-computed/3;
 
             .buttons {
