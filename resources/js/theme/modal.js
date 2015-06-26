@@ -5,7 +5,7 @@ $(function () {
 
         e.preventDefault();
 
-        $($(e.target).data('target')).appendTo('body').find('.modal-content').load($(e.target).attr('href'));
+        $($(e.target).data('target')).appendTo('body').find('.modal-content').load(encodeURI($(e.target).attr('href')));
     });
 
     // Clear remote modals when closed.
