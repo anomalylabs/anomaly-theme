@@ -5,7 +5,7 @@ $(function () {
 
         e.preventDefault();
 
-        bootbox.prompt($(this).data('message') || DEFAULT_PROMPT_MESSAGE, function (result) {
+        bootbox.prompt($(this).data('message'), function (result) {
 
             var match = $(e.target).data('match') || 'yes';
 

@@ -5,7 +5,7 @@ $(function () {
 
         e.preventDefault();
 
-        bootbox.confirm($(this).data('message') || DEFAULT_CONFIRM_MESSAGE, function (result) {
+        bootbox.confirm($(this).data('message'), function (result) {
             if (result === true) {
                 $(e.target).unbind('click')[0].click();
             }
