@@ -30,17 +30,4 @@
 
 {{ html_script(asset_path("theme.js")) }}
 
-<script type="text/javascript">
-
-    var APPLICATION_URL = "{{ url() }}";
-    var APPLICATION_REFERENCE = "{{ env('APPLICATION_REFERENCE') }}";
-    var APPLICATION_DOMAIN = "{{ env('APPLICATION_DOMAIN') }}";
-    var CSRF_TOKEN = "{{ csrf_token() }}";
-    var APP_DEBUG = "{{ env('APP_DEBUG') }}";
-    var TIMEZONE = "{{ env('TIMEZONE') }}";
-    var LOCALE = "{{ env('LOCALE') }}";
-
-    var DEFAULT_CONFIRM_MESSAGE = "{{ trans('streams::message.confirm_delete')|raw }}";
-    var DEFAULT_PROMPT_MESSAGE = "{{ trans('streams::message.prompt_delete')|raw }}";
-
-</script>
+{{ constants() }}
