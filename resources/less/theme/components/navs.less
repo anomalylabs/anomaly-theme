@@ -16,8 +16,9 @@
             > a,
             > a:hover,
             > a:focus {
-                padding: 7px 21px 12px;
+                border: none;
                 background: @inverse;
+                padding: 7px 21px 12px;
             }
         }
 
@@ -38,4 +39,26 @@
     position: inherit;
     background-color: @inverse;
     border-radius: @nav-border-radius;
+}
+
+@media (max-width: @screen-xs-max) {
+
+    // Tabs
+    .nav-tabs {
+        > li {
+            &.active {
+                > a,
+                > a:hover,
+                > a:focus {
+                    padding: 10px 15px;
+                    background: @brand-secondary;
+                }
+            }
+
+            > a:hover,
+            > a:focus {
+                border: none;
+            }
+        }
+    }
 }
