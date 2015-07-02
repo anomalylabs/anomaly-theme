@@ -14,6 +14,13 @@
         background-color: @input-bg-disabled;
         border-color: mix(@gray, white, 30%);
     }
+
+    .form-group.focus &,
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+        border-color: darken(@input-border, 20%);
+    }
 }
 
 a.input-group-addon {
