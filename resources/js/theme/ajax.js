@@ -27,5 +27,14 @@ $(function () {
 
             alert(exception);
         }
+
+        // Something terrible happened.
+        if (xhr.status == '500') {
+
+            // Close all modals.
+            $('.modal').modal('hide');
+
+            alert(exception);
+        }
     });
 });
