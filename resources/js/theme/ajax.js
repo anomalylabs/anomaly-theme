@@ -13,9 +13,9 @@ $(function () {
 
             // If we're in the admin redirect to admin login.
             if (window.location.pathname.startsWith('/admin')) {
-                alert(APP_URL + '/admin/login');
+                window.location = APP_URL + '/admin/login';
             } else {
-                alert(APP_URL + '/login');
+                window.location = APP_URL + '/login';
             }
         }
 
