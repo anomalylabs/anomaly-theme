@@ -1,3 +1,3 @@
-{% for path in asset_paths("scripts.js") %}
-    {{ html_script(path) }}
+{% for script in asset_scripts("scripts.js") %}
+    {{ script|raw }}
 {% endfor %}
