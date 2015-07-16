@@ -1,23 +1,42 @@
 body#login {
 
+    background: @brand-secondary;
+
     #header {
         left: 0;
         color: @inverse;
-        font-size: 24px;
+        margin-top: 10%;
+        font-size: 32px;
+        font-weight: 600;
+        box-shadow: none;
+        position: relative;
         text-align: center;
-        font-weight: lighter;
 
         > img {
-            height: 30px;
+            height: 48px;
             margin-top: -4px;
         }
     }
 
     #content {
         padding-left: 0;
+        padding-top: 30px;
 
         form {
-            margin-top: 20%;
+
+            input {
+                border-color: #ffffff;
+
+                &:-webkit-autofill {
+                    background-color: #ffffff !important;
+                }
+            }
+
+            .checkbox,
+            .checkbox .icons,
+            .checkbox .icons span {
+                color: @inverse !important;
+            }
         }
     }
 }

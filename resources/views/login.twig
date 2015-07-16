@@ -5,7 +5,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-lg-offset-9">
-                {{ form_open({'method': 'post', 'class': 'form'}) }}
+                {{ form_open({'method': 'post'}) }}
+
+                <input style="display:none">
+                <input type="password" style="display:none">
 
                 <div class="form-group">
                     {{ form_email("email", null, {'class': 'form-control', 'placeholder': 'Email'}) }}
