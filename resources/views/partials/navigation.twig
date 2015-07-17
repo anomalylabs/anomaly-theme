@@ -6,10 +6,11 @@
         <li class="user">
             <div class="media">
                 <div class="media-left">
-                    <img class="img-circle" src="https://gravatar.com/avatar/{{ md5(auth_user().email) }}">
+                    {{ image(config_get('anomaly.theme.anomaly::variables.icon')).class('logo')|raw }}
                 </div>
                 <div class="media-body">
                     <strong>
+                        <img class="img-circle avatar" src="https://gravatar.com/avatar/{{ md5(auth_user().email) }}">
                         {{ auth_user().getDisplayName() ?: auth_user().username }}
                     </strong>
                     <ul class="list-inline">
