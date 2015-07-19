@@ -27,10 +27,11 @@ body#login {
             input {
                 border-color: #ffffff;
 
-                &:-webkit-autofill {
+                &:-webkit-autofill,
+                &:-webkit-autofill:focus {
                     background-color: #ffffff !important;
-                    box-shadow: 0 0 0px 1000px white inset;
-                    -webkit-box-shadow: 0 0 0px 1000px white inset;
+                    box-shadow: 0 0 0 1000px white inset;
+                    -webkit-box-shadow: 0 0 0 1000px white inset;
                 }
             }
 
@@ -38,6 +39,21 @@ body#login {
             .checkbox .icons,
             .checkbox .icons span {
                 color: @inverse !important;
+            }
+        }
+
+        .alert {
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding: 0 !important;
+            border: none !important;
+            background: none !important;
+            box-shadow: none !important;
+            text-align: center;
+
+            .close {
+                display: none;
+                visibility: hidden;
             }
         }
     }
