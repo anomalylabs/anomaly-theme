@@ -28,6 +28,15 @@ $(function () {
             alert(exception);
         }
 
+        // We're lost.
+        if (xhr.status == '404') {
+
+            // Close all modals.
+            $('.modal').modal('hide');
+
+            alert(exception);
+        }
+
         // Something terrible happened.
         if (xhr.status == '500') {
 
