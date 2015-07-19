@@ -9,7 +9,7 @@ $(function () {
             // Close all modals.
             $('.modal').modal('hide');
 
-            alert(exception);
+            bootbox.alert('Unauthorized (401)');
 
             // If we're in the admin redirect to admin login.
             if (window.location.pathname.startsWith('/admin')) {
@@ -25,7 +25,7 @@ $(function () {
             // Close all modals.
             $('.modal').modal('hide');
 
-            alert(exception);
+            bootbox.alert('Not Allowed (403)');
         }
 
         // We're lost.
@@ -34,7 +34,7 @@ $(function () {
             // Close all modals.
             $('.modal').modal('hide');
 
-            alert(exception);
+            bootbox.alert('Page Not Found (404)');
         }
 
         // Something terrible happened.
@@ -43,7 +43,7 @@ $(function () {
             // Close all modals.
             $('.modal').modal('hide');
 
-            alert(exception);
+            bootbox.alert('Error (500)');
         }
     });
 });
