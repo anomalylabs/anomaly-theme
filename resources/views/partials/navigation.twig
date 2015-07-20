@@ -35,7 +35,7 @@
             <li class="{{ module.active ? 'active' }}">
                 <a href="{{ url_to('admin/' ~ module.slug) }}">
                     {{ icon(module.icon) }}
-                    <span>{{ trans(module.name) }}</span>
+                    <span>{{ trans(module.title) }}</span>
                 </a>
             </li>
         {% endfor %}
