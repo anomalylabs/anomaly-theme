@@ -4,11 +4,7 @@
         &copy; {{ now|date("Y") }} - AnomalyLabs, Inc.
         <br>
         <br>
-        Streams Platform Version {{ config_get("constants.version") }}
-        <br>
-        {{ template.footprint }}
-        <br>
-        {{ template.pagination }}
+        {{ config_get("streams::distribution.version") }}
     </small>
 
 </footer>
