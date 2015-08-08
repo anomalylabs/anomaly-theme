@@ -1,9 +1,15 @@
 <footer id="footer" class="container-fluid">
 
-    <small>
+    <small class="pull-left">
         {{ config_get("streams::distribution.version") }}
         |
         &copy; {{ now|date("Y") }} - AnomalyLabs, Inc.
+    </small>
+
+    <small class="pull-right">
+        {{ elapsed() }}
+        |
+        {{ footprint() }}
     </small>
 
 </footer>
