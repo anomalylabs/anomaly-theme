@@ -36,11 +36,15 @@ ul.tree {
 
         &.dragged {
             opacity: 0.5;
+            position: absolute;
             margin-bottom: @line-height-computed/3;
         }
 
         &.placeholder {
-            display: none;
+            height: 30px;
+            margin-bottom: 9px;
+            border: 2px dashed @gray-light;
+            border-radius: @border-radius-large;
         }
     }
 }
