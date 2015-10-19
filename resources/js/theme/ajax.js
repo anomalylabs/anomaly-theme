@@ -43,7 +43,7 @@ $(function () {
             // Close all modals.
             $('.modal').modal('hide');
 
-            bootbox.alert('Error (500)');
+            bootbox.alert('Error (500) - Please check your application error logs.');
         }
     });
 });
