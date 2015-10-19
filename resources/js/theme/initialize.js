@@ -13,4 +13,7 @@ $(function () {
 
     // Nano sliders
     $('.nano').nanoScroller();
+
+    // Tooltips
+    $('[data-toggle="tooltip"]').tooltip();
 });
