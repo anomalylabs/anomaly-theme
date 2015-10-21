@@ -16,4 +16,8 @@ $(function () {
 
     // Tooltips
     $('[data-toggle="tooltip"]').tooltip();
+
+    setTimeout(function () {
+        window.location = APPLICATION_URL + '/admin/logout';
+    }, 30 * 60 * 1000);
 });
