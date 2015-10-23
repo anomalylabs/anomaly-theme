@@ -31,7 +31,7 @@
             </div>
         </li>
 
-        {% for module in modules().navigation() %}
+        {% for module in template.addons.modules.navigation() %}
             <li class="{{ module.active ? 'active' }}">
                 <a href="{{ url_to('admin/' ~ module.slug) }}">
                     {{ icon(module.icon) }}
