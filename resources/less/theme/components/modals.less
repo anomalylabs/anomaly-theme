@@ -1,3 +1,11 @@
+@import "../../bootstrap/mixins";
+
+.modal {
+    &.fade .modal-dialog {
+        .transition-transform(~"0.1s ease-out") !important;
+    }
+}
+
 .modal-loading {
     min-height: 100px;
 }
