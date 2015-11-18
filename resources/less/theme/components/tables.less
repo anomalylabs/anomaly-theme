@@ -9,6 +9,16 @@
                 opacity: 0.2;
             }
 
+            .visible-hover {
+                visibility: hidden;
+            }
+
+            &:hover {
+                .visible-hover {
+                    visibility: visible;
+                }
+            }
+
             > th,
             > td {
                 vertical-align: middle;
