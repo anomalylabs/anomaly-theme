@@ -1,7 +1,10 @@
 $(function () {
 
+    var modal = $('.modal');
+    var remote = $('.modal.remote');
+
     // Clear remote modals when closed.
-    $('.modal.remote').on('hidden.bs.modal', function () {
+    remote.on('hidden.bs.modal', function () {
 
         $(this).removeData('bs.modal');
 
@@ -9,16 +12,36 @@ $(function () {
     });
 
     // Handle ajax links in modals.
-    $('.modal').on('click', 'a.ajax', function (e) {
+    modal.on('click', 'a.ajax', function (e) {
 
         e.preventDefault();
 
         var wrapper = $(this).closest('.modal-content');
 
-        wrapper.html('<div class="modal-loading"><div class="active loader"></div></div>');
+        wrapper.append('<div class="modal-loading"><div class="active loader"></div></div>');
 
         $.get($(this).attr('href'), function (html) {
             wrapper.html(html);
         });
+    });
+
+    // Handle ajax forms in modals.
+    modal.on('submit', 'form.ajax', function (e) {
+
+        e.preventDefault();
+
+        var wrapper = $(this).closest('.modal-content');
+
+        wrapper.append('<div class="modal-loading"><div class="active loader"></div></div>');
+
+        if ($(this).attr('method') == 'GET') {
+            $.get($(this).attr('action'), $(this).serializeArray(), function (html) {
+                wrapper.html(html);
+            });
+        } else {
+            $.post($(this).attr('action'), $(this).serializeArray(), function (html) {
+                wrapper.html(html);
+            });
+        }
     });
 });
