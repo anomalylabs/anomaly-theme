@@ -11,6 +11,11 @@ $(function () {
         $(this).find('.modal-content').html('<div class="modal-loading"><div class="active loader"></div></div>');
     });
 
+    // Show loader for remote modals.
+    remote.on('show.bs.modal', function () {
+        $(this).find('.modal-content').html('<div class="modal-loading"><div class="active loader"></div></div>');
+    });
+
     // Handle ajax links in modals.
     modal.on('click', 'a.ajax', function (e) {
 
