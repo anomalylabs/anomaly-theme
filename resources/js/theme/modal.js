@@ -17,7 +17,7 @@ $(function () {
     });
 
     // Handle ajax links in modals.
-    modal.on('click', 'a.ajax', function (e) {
+    modal.on('click', 'a.ajax, .pagination a', function (e) {
 
         e.preventDefault();
 
